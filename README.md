@@ -38,7 +38,7 @@ I designed an email-sending service that supports sending emails to single or mu
   java -version
 ```
 
-4. To build and run the Spring Boot application, you need Maven. If Maven is not installed, you can follow the installation instructions from here.
+4. To build and run the Spring Boot application, you need Maven. If Maven is not installed, you can follow the installation instructions from [here](https://github.com/makarandhinge/Installtion-Guideline/blob/main/Maven.md)
 
 - Build the project
 
@@ -67,7 +67,7 @@ Make sure you have Node.js installed. You can verify it with
 node -v
 npm -v
 ```
-If Node.js is not installed, you can download it from here.
+If Node.js is not installed, you can download it from [here](https://github.com/makarandhinge/Installtion-Guideline/blob/main/Node.md)
 
 Run the following command to install the necessary dependencies for the frontend
 
@@ -83,4 +83,32 @@ To start the React development server (using Vite), use the following command:
 npm run dev
 ```
 The frontend should now be running on http://localhost:5173.
+
+
+## API Reference
+
+#### Send Email
+
+```http
+  POST /api/v1/email/send
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `to` | `String` |Whom do you want to send the email to?|
+| `subject` | `String` |Subject of the email|
+| `message` | `String` |The actual message of the email|
+
+#### Send Email With File
+
+```http
+  POST /api/v1/email/send-with-file
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `to` | `String` |Whom do you want to send the email to?|
+| `subject` | `String` |Subject of the email|
+| `message` | `String` |The actual message of the email|
+| `file` | `Multipartfile` |The attachment of the email|
 
