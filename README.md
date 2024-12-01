@@ -84,3 +84,31 @@ npm run dev
 ```
 The frontend should now be running on http://localhost:5173.
 
+
+## API Reference
+
+#### Send Email
+
+```http
+  POST /api/v1/email/send
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `to` | `String` |Whom do you want to send the email to?|
+| `subject` | `String` |Subject of the email|
+| `message` | `String` |The actual message of the email|
+
+#### Send Email With File
+
+```http
+  POST /api/v1/email/send-with-file
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `to` | `String` |Whom do you want to send the email to?|
+| `subject` | `String` |Subject of the email|
+| `message` | `String` |The actual message of the email|
+| `file` | `Multipartfile` |The attachment of the email|
+
