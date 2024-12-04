@@ -43,12 +43,12 @@ I designed an email-sending service that supports sending emails to single or mu
 - Build the project
 
 ```bash
-  ./mvnw clean install
+  mvnw clean install
 ```
 - Run the Spring Boot application
 
 ```bash
-  ./mvnw spring-boot:run
+  mvnw spring-boot:run
 ```
 The backend should now be running on http://localhost:8080.
 
